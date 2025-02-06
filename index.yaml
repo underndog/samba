@@ -2,8 +2,18 @@ apiVersion: v1
 entries:
   samba-server:
   - apiVersion: v2
+    appVersion: 1.0.10
+    created: "2025-02-06T04:21:03.402540862Z"
+    description: A Helm chart for Kubernetes
+    digest: 96b411c5b9bbd8baede12f76b1f40edf221d4aa3fa29092bd9710e00753ff373
+    name: samba-server
+    type: application
+    urls:
+    - https://underndog.github.io/samba/helm-chart/samba-server-0.0.7.tgz
+    version: 0.0.7
+  - apiVersion: v2
     appVersion: 1.0.8
-    created: "2024-12-11T10:15:17.313543612Z"
+    created: "2025-02-06T04:21:03.401722141Z"
     description: A Helm chart for Kubernetes
     digest: 58a91b0d7179e59a0c8c1d0135a548ead2308a2097df0e0720b3b482952fc305
     name: samba-server
@@ -13,7 +23,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: 1.0.8
-    created: "2024-12-11T10:15:17.312726508Z"
+    created: "2025-02-06T04:21:03.400837265Z"
     description: A Helm chart for Kubernetes
     digest: 02291a25cc7f6abb39e30f534733d861726bed474f76901735f434e55889b38a
     name: samba-server
@@ -23,7 +33,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 1.0.8
-    created: "2024-12-11T10:15:17.311943478Z"
+    created: "2025-02-06T04:21:03.399953071Z"
     description: A Helm chart for Kubernetes
     digest: 33a1f2f876f9a5cc5bbcc352c4975d5de981036d8b1a30cb6ae93bb41988f65a
     name: samba-server
@@ -33,7 +43,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 1.0.8
-    created: "2024-12-11T10:15:17.31115188Z"
+    created: "2025-02-06T04:21:03.398079189Z"
     description: A Helm chart for Kubernetes
     digest: 126443e05f37c626098503dd16336d98a472baa6b8cf89d1435dae23ace895d2
     name: samba-server
@@ -43,7 +53,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.0.8
-    created: "2024-12-11T10:15:17.310291713Z"
+    created: "2025-02-06T04:21:03.397090239Z"
     description: A Helm chart for Kubernetes
     digest: 60f5d24b36d968298fdf238dcb81fd5df0283b4a0cc4cd0092bfefcedf922fd8
     name: samba-server
@@ -53,7 +63,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.0.8
-    created: "2024-12-11T10:15:17.309479989Z"
+    created: "2025-02-06T04:21:03.396166023Z"
     description: A Helm chart for Kubernetes
     digest: 4f6b72326e75d9272d16adf1b49d7df0e9de7e617277b6318dd46307ff9649b0
     name: samba-server
@@ -61,4 +71,4 @@ entries:
     urls:
     - https://underndog.github.io/samba/helm-chart/samba-server-0.0.1.tgz
     version: 0.0.1
-generated: "2024-12-11T10:15:17.30834973Z"
+generated: "2025-02-06T04:21:03.395012114Z"

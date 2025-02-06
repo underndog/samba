@@ -152,6 +152,7 @@ storageClass:
 
 persistentVolumeClaim:
   usedBySambaServer:
+    enabled: true
     storageSize: 300Gi
     referStorageClass: ebs-gp3-sc
     accessModes:

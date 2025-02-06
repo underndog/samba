@@ -1,3 +1,4 @@
+{{- if .Values.persistentVolumeClaim.usedBySambaServer.enabled }}
 kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
@@ -9,8 +10,4 @@ spec:
     requests:
       storage: {{ .Values.persistentVolumeClaim.usedBySambaServer.storageSize }}
   storageClassName: {{ .Values.persistentVolumeClaim.usedBySambaServer.referStorageClass }}
-
-
-
-
-  
+{{- end }}
