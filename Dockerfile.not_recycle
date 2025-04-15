@@ -1,15 +1,15 @@
 FROM alpine
 MAINTAINER Mr Nim <mr.nim94@gmail.com>
 
-# #https://github.com/kubernetes-csi/csi-driver-smb/issues/79#issuecomment-675325067
-# RUN sed -i -e 's/v[[:digit:]]\..*\//edge\//g' /etc/apk/repositories
-
-# Install samba
+# Install samba and dependencies
 RUN apk --no-cache --no-progress upgrade && \
     apk --no-cache --no-progress add bash samba shadow tini tzdata && \
     addgroup -S smb && \
-    adduser -S -D -H -h /tmp -s /sbin/nologin -G smb -g 'Samba User' smbuser &&\
-    file="/etc/samba/smb.conf" && \
+    adduser -S -D -H -h /tmp -s /sbin/nologin -G smb -g 'Samba User' smbuser && \
+    id smbuser  # Check if smbuser is created successfully
+
+# Modify smb.conf
+RUN file="/etc/samba/smb.conf" && \
     sed -i 's|^;* *\(log file = \).*|   \1/dev/stdout|' $file && \
     sed -i 's|^;* *\(load printers = \).*|   \1no|' $file && \
     sed -i 's|^;* *\(printcap name = \).*|   \1/dev/null|' $file && \
@@ -57,15 +57,25 @@ RUN apk --no-cache --no-progress upgrade && \
     echo '' >>$file && \
     rm -rf /tmp/*
 
+# Copy custom script
 COPY samba.sh /usr/bin/
 
+# Expose ports
 EXPOSE 137/udp 138/udp 139 445
 
+# Set healthcheck
 HEALTHCHECK --interval=60s --timeout=15s \
             CMD smbclient -L \\localhost -U % -m SMB3
 
+# Define volumes
 VOLUME ["/etc", "/var/cache/samba", "/var/lib/samba", "/var/log/samba",\
             "/run/samba"]
+
+# Make sure the samba.sh script is executable
 RUN chmod +x /usr/bin/samba.sh
 
+# Use smbuser to run Samba service (ensure smbuser is created)
+USER smbuser
+
+# Entry point to run the samba script
 ENTRYPOINT ["/sbin/tini", "--", "/usr/bin/samba.sh"]
