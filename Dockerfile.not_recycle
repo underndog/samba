@@ -1,5 +1,5 @@
 FROM alpine
-MAINTAINER Mr Nim <mr.nim94@gmail.com>
+MAINTAINER Nimtechnology <mr.nim94@gmail.com>
 
 # Install samba and dependencies
 RUN apk --no-cache --no-progress upgrade && \
