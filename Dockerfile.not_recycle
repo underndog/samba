@@ -40,7 +40,6 @@ RUN apk --no-cache --no-progress upgrade && \
     echo '   locking = no' >>$file && \
     echo '   blocking locks = no' >>$file && \
     echo '   aio max threads = 500' >>$file && \
-    echo '   socket options = TCP_NODELAY IPTOS_LOWDELAY SO_RCVBUF=131072 SO_SNDBUF=131072' >>$file && \
     echo '' >>$file && \
     echo '   # Security' >>$file && \
     echo '   client ipc max protocol = SMB3' >>$file && \
