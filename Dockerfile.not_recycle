@@ -1,4 +1,4 @@
-FROM alpine:3.18.12
+FROM alpine:3.20.6
 MAINTAINER Mr Nim <mr.nim94@gmail.com>
 
 # #https://github.com/kubernetes-csi/csi-driver-smb/issues/79#issuecomment-675325067
