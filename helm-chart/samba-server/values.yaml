@@ -127,7 +127,7 @@ envVars:
 
 secrets:
   enabled: false
-  username: ""
+  username: "samba-admin"
   password: ""
 
 storageClass:

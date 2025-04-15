@@ -5,6 +5,8 @@ metadata:
   name: {{ include "samba-server.fullname" . }}
   labels:
     {{- include "samba-server.labels" . | nindent 4 }}
+  annotations:
+    checksum/secrets: {{ include (print $.Template.BasePath "/secret.yaml") . | sha256sum }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
