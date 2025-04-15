@@ -2,10 +2,10 @@ apiVersion: v1
 entries:
   samba-server:
   - apiVersion: v2
-    appVersion: 1.0.10
-    created: "2025-04-15T15:53:10.212850904Z"
+    appVersion: 1.1.0
+    created: "2025-04-15T18:20:51.271254241Z"
     description: A Helm chart for Kubernetes
-    digest: 5221213a4053f9a2cd9770f3d682c2e135ae2cd1fd896addec15451b8e9da8bf
+    digest: d7ddf396ba0def1ed91c27b1dd2fdf0c472422fab340b07e03c0e1acff81dc05
     name: samba-server
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 1.1.0
   - apiVersion: v2
     appVersion: 1.0.10
-    created: "2025-04-15T15:53:10.210751345Z"
+    created: "2025-04-15T18:20:51.269936552Z"
     description: A Helm chart for Kubernetes
     digest: 893cf477bc889ff1b2b268abdcea53a287ecd09edf60f2607157eaaeb80fa8e3
     name: samba-server
@@ -23,7 +23,7 @@ entries:
     version: 1.0.0
   - apiVersion: v2
     appVersion: 1.0.10
-    created: "2025-04-15T15:53:10.208978742Z"
+    created: "2025-04-15T18:20:51.268947909Z"
     description: A Helm chart for Kubernetes
     digest: 96b411c5b9bbd8baede12f76b1f40edf221d4aa3fa29092bd9710e00753ff373
     name: samba-server
@@ -33,7 +33,7 @@ entries:
     version: 0.0.7
   - apiVersion: v2
     appVersion: 1.0.8
-    created: "2025-04-15T15:53:10.206666947Z"
+    created: "2025-04-15T18:20:51.267943099Z"
     description: A Helm chart for Kubernetes
     digest: 58a91b0d7179e59a0c8c1d0135a548ead2308a2097df0e0720b3b482952fc305
     name: samba-server
@@ -43,7 +43,7 @@ entries:
     version: 0.0.6
   - apiVersion: v2
     appVersion: 1.0.8
-    created: "2025-04-15T15:53:10.205346977Z"
+    created: "2025-04-15T18:20:51.26665182Z"
     description: A Helm chart for Kubernetes
     digest: 02291a25cc7f6abb39e30f534733d861726bed474f76901735f434e55889b38a
     name: samba-server
@@ -53,7 +53,7 @@ entries:
     version: 0.0.5
   - apiVersion: v2
     appVersion: 1.0.8
-    created: "2025-04-15T15:53:10.202979476Z"
+    created: "2025-04-15T18:20:51.265387966Z"
     description: A Helm chart for Kubernetes
     digest: 33a1f2f876f9a5cc5bbcc352c4975d5de981036d8b1a30cb6ae93bb41988f65a
     name: samba-server
@@ -63,7 +63,7 @@ entries:
     version: 0.0.4
   - apiVersion: v2
     appVersion: 1.0.8
-    created: "2025-04-15T15:53:10.201868581Z"
+    created: "2025-04-15T18:20:51.264429132Z"
     description: A Helm chart for Kubernetes
     digest: 126443e05f37c626098503dd16336d98a472baa6b8cf89d1435dae23ace895d2
     name: samba-server
@@ -73,7 +73,7 @@ entries:
     version: 0.0.3
   - apiVersion: v2
     appVersion: 1.0.8
-    created: "2025-04-15T15:53:10.200582807Z"
+    created: "2025-04-15T18:20:51.263501116Z"
     description: A Helm chart for Kubernetes
     digest: 60f5d24b36d968298fdf238dcb81fd5df0283b4a0cc4cd0092bfefcedf922fd8
     name: samba-server
@@ -83,7 +83,7 @@ entries:
     version: 0.0.2
   - apiVersion: v2
     appVersion: 1.0.8
-    created: "2025-04-15T15:53:10.199439247Z"
+    created: "2025-04-15T18:20:51.262715605Z"
     description: A Helm chart for Kubernetes
     digest: 4f6b72326e75d9272d16adf1b49d7df0e9de7e617277b6318dd46307ff9649b0
     name: samba-server
@@ -91,4 +91,4 @@ entries:
     urls:
     - https://underndog.github.io/samba/helm-chart/samba-server-0.0.1.tgz
     version: 0.0.1
-generated: "2025-04-15T15:53:10.198136981Z"
+generated: "2025-04-15T18:20:51.261761168Z"
