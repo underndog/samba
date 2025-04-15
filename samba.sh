@@ -18,12 +18,6 @@
 
 set -o nounset                              # Treat unset variables as an error
 
-# Ensure smbuser is created at runtime
-if ! id -u smbuser > /dev/null 2>&1; then
-    echo "Creating smbuser..."
-    addgroup -S smb && adduser -S -D -H -h /tmp -s /sbin/nologin -G smb -g 'Samba User' smbuser
-fi
-
 ### charmap: setup character mapping for file/directory names
 # Arguments:
 #   chars) from:to character mappings separated by ','
