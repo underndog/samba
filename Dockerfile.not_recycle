@@ -1,12 +1,9 @@
 FROM alpine
-MAINTAINER Nimtechnology <mr.nim94@gmail.com>
+MAINTAINER Mr Nim <mr.nim94@gmail.com>
 
 # Install samba and dependencies
 RUN apk --no-cache --no-progress upgrade && \
-    apk --no-cache --no-progress add bash samba shadow tini tzdata && \
-    addgroup -S smb && \
-    adduser -S -D -H -h /tmp -s /sbin/nologin -G smb -g 'Samba User' smbuser && \
-    id smbuser  # Check if smbuser is created successfully
+    apk --no-cache --no-progress add bash samba shadow tini tzdata
 
 # Modify smb.conf
 RUN file="/etc/samba/smb.conf" && \
@@ -73,9 +70,6 @@ VOLUME ["/etc", "/var/cache/samba", "/var/lib/samba", "/var/log/samba",\
 
 # Make sure the samba.sh script is executable
 RUN chmod +x /usr/bin/samba.sh
-
-# Use smbuser to run Samba service (ensure smbuser is created)
-USER smbuser
 
 # Entry point to run the samba script
 ENTRYPOINT ["/sbin/tini", "--", "/usr/bin/samba.sh"]
